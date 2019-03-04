@@ -11,11 +11,12 @@ var background = {
   backgroundSize: 'cover',
   overflow: 'hidden',
   textAlign: 'center',
-  height: '100vh',
+  height: '500vh',
   color: '#333',
 };
 
 class App extends Component {
+
   render() {
     return (
       <div className="App" style={background}>
