@@ -8,12 +8,12 @@ const ProjectCard = (props) => {
 
   return (
     <div class="project-card" data-aos="zoom-in">
-      <img src={props.picture} alt="not found" align="middle" height="300px" width="100%" style={{opacity: "0.9"}}/>
+      <img src={props.picture} alt="not found" align="middle" height="270px" width="100%" style={{opacity: "0.9"}}/>
       <h2 className="project-title">
         {props.title}
       </h2>
       <div className="project-subtitle">
-        {props.subTitle}
+        {props.technologies}
       </div>
       <div className="project-body">
         {props.body}

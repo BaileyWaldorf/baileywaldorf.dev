@@ -23,7 +23,6 @@ class App extends Component {
         <Header />
         <Home />
         <Projects />
-        <Experience />
       </div>
     );
   }

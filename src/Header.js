@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from "classnames";
 import './App.css';
 
 class Header extends Component {
@@ -9,10 +10,33 @@ class Header extends Component {
       work: false,
       about: false,
       contact: false,
+      prevScrollpos: window.pageYOffset,
+      visible: true
     }
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+  
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+  
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible
+    });
+  }
+
   onButtonClick = (header) => {
+    // eslint-disable-next-line default-case
     switch (header) {
       case 'projects':
         this.setState({
@@ -51,7 +75,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header-container">
+      <div className={classnames("header-container", {"header-container-hidden": !this.state.visible})}>
         <span className="header-logo">
           <a href="index.html">
             Bailey Waldorf
