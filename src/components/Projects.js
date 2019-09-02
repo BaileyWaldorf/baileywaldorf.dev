@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
+import "../css/App.css";
 import ProjectCard from './ProjectCard';
+import HideNSeek from '../assets/Hide-N-Seek-Animated-Mockup.gif';
+import LanguageLeap from '../assets/language-leap.jpg';
+import GotEvents from '../assets/got-events.jpg';
+import Rising from '../assets/rising.jpg';
 
 class Projects extends Component {
 
@@ -11,7 +15,8 @@ class Projects extends Component {
         "subTitle": "Project Lead & Developer",
         "technologies": "React Native, Firestore, Node, Express",
         "body": "Real time hide-n-seek mobile game where friends can relive their childhood.",
-        "picture": "./Hide-N-Seek-Animated-Mockup.gif"
+        "picture": HideNSeek,
+        "URL": "https://github.com/BaileyWaldorf/Hide-N-Seek-IRL"
       },
       // {
       //   "title": "Home Depot Internship",
@@ -25,28 +30,24 @@ class Projects extends Component {
         "subTitle": "Developer & Designer",
         "technologies": "Dart, Flutter, Android Studio, Hackathon",
         "body": "Using Google Vision and Google Translate to teach new languages.",
-        "picture": "./language-leap.jpg"
+        "picture": LanguageLeap,
+        "URL": "https://github.com/BaileyWaldorf/LanguageLeap"
       },
       {
         "title": "UCF Events Page Recreation",
         "subTitle": "Project Lead, Developer, & Designer",
         "technologies": "React, mySQL, Node, Express",
         "body": "A CRUD app to view and manage events going on around school.",
-        "picture": "./got-events.jpg"
+        "picture": GotEvents,
+        "URL": "https://github.com/BaileyWaldorf/Got-Events"
       },
       {
         "title": "Rising",
         "subTitle": "Scripter & Graphic Designer",
         "technologies": "Unity, C#, GameJam, React, Grafana",
         "body": "A shared controller experience where you must use teamwork and wit to complete puzzles.",
-        "picture": "./rising.jpg"
-      },
-      {
-        "title": "Royal Original Redesign",
-        "subTitle": "UX/UI Design",
-        "technologies": "Dart, Flutter, Android Studio, Hackathon",
-        "body": "Created a few new looks for a clothing website paying close attention to user experience.",
-        "picture": "./royal-og-redesign.jpg"
+        "picture": Rising,
+        "URL": "https://risinggame.itch.io/rising"
       }
     ]
   }
@@ -58,7 +59,7 @@ class Projects extends Component {
         <div className="projects-section-header">Some things I've built</div>
         <div class="projects-tile-container">
           {this.projects.projects.map((project, index) =>
-            <ProjectCard title={project.title} subTitle={project.subTitle} technologies={project.technologies} body={project.body} picture={project.picture} index={index}/>)
+            <ProjectCard title={project.title} subTitle={project.subTitle} technologies={project.technologies} body={project.body} picture={project.picture} index={index} URL={project.URL}/>)
           }
         </div>
       </div>

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Home from './Home';
-import Projects from './Projects';
-import Experience from './Experience';
+import './css/App.css';
+import Header from './components/Header';
+import Home from './components/Home';
+import Projects from './components/Projects';
 import Background from './assets/bg.jpg';
 
 var background = {
@@ -11,7 +10,7 @@ var background = {
   backgroundSize: 'cover',
   overflow: 'hidden',
   textAlign: 'center',
-  height: '500vh',
+  height: '200vh',
   color: '#333',
 };
 

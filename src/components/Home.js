@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Portrait from './assets/portrait-dramatic.jpg';
-import PortraitHovered from './assets/portrait-vivid.jpg';
-import './App.css';
+import Portrait from '../assets/portrait-dramatic.jpg';
+import PortraitHovered from '../assets/portrait-vivid.jpg';
+import '../css/App.css';
 
 class Home extends Component {
   constructor(props) {
