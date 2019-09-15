@@ -4,6 +4,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+a, a:visited {
+  color: rgba(240,240,240,.6);
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
@@ -20,13 +24,11 @@ form {
 .nav-buttons > a {
   color: rgba(240,240,240,.6);
   display:inline-block;
-  font-weight: 600;
   margin-left: 60px;
 }
 
 .nav-buttons-selected > a {
-  color: rgba(240,240,240,1);
-  font-weight: 600;
+  color: rgb(100, 255, 218);
   margin-left: 60px;
 }
 
@@ -35,15 +37,14 @@ form {
 }
 
 .nav-buttons > a:visited {
-  color: rgba(240,240,240,1);
+  color: rgba(240,240,240,.6);
 }
 
 .header-container {
-  background-color: rgba(240, 240, 240, 0.1);
+  background-color: #182236;
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 767px;
   width: 100vw;
   height: 60px;
   padding: 0px;
@@ -62,13 +63,79 @@ form {
 .nav-buttons-container {
   position: absolute;
   right: 70px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+}
+
+.main-nav, .navbar-toggle {
+  list-style-type: none;
+  display: none;
+}
+
+.active {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-buttons-container {display:none;}
+
+  .header-container {
+    background-color: #182236;
+  }
+
+  .main-nav {
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .active {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    margin: 0;
+    margin-top: 60px;
+    padding: 0px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #182236;
+  }
+
+  .nav-links {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Fira Code', monospace;
+  }
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .main-nav li {
+    text-align: center;
+    margin: 15px auto;
+  }
+  
+  .navbar-toggle {
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+  }
+}
+
+.dot-dev {
+  color: rgb(100, 255, 218);
+  font-family: 'Fira Code', monospace;
 }
 
 .header-logo > a {
+  display: inline-block;
   margin-left: 50px;
-  font-weight: bolder;
   font-size: large;
   color: rgba(240, 240, 240, 0.7);
+  font-family: 'Fira Code', monospace;
 }
 
 .header-logo > a:hover {
@@ -78,46 +145,105 @@ form {
 .home-page {
   margin: 0px auto;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   /* line-height: calc(100vh - 60px - 4px); */
 }
 
-.about-container {
-  display: flex;
-  width: 1100px;
-  padding: 0px 150px;
-  color: rgba(250,250,250,0.8);
-  justify-content: space-between;
+@media only screen and (max-width: 700px) {
+  .about-container {
+    display: block;
+    align-self: flex-start;
+    margin-top: 100px;
+    width: 1100px;
+    padding: 0px 75px;
+    color: rgba(250,250,250,0.8);
+  }
+
+  .about-txt-container {
+    text-align: left;
+    float: left;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+  
+  .about-pic-container {
+    display: block;
+    max-width: 350px;
+    max-height: 350px;
+    min-height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .self-portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .self-portrait:hover {
+    cursor: pointer;
+    border-radius: 40%;
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  }
+
+  .ca3-scroll-down-arrow {
+    display: none;
+  }
 }
 
-.about-txt-container {
-  text-align: left;
-  float: left;
-  margin-right: 50px;
-  max-width: 600px;
-}
-
-.about-pic-container {
-  float: right;
-}
-
-.self-portrait {
-  border-radius: 50%;
-  float: right;
-}
-
-.self-portrait:hover {
-  cursor: pointer;
-  border-radius: 40%;
-  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+@media only screen and (min-width: 700px) {
+  .about-container {
+    display: flex;
+    width: 1100px;
+    height: 450px;
+    padding: 0px 100px;
+    color: rgba(250,250,250,0.8);
+    justify-content: space-between;
+  }
+  
+  .about-txt-container {
+    text-align: left;
+    float: left;
+    margin-right: 20px;
+    max-width: 600px;
+    align-self: center;
+  }
+  
+  .about-pic-container {
+    float: right;
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    max-width: 350px;
+    max-height: 350px;
+  }
+  
+  .self-portrait {
+    border-radius: 50%;
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .self-portrait:hover {
+    cursor: pointer;
+    border-radius: 40%;
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  }
 }
 
 .txt-hello {
-  font-weight: bold;
   font-size: 20px;
+  color: rgb(100, 255, 218);
+  font-family: 'Fira Code', monospace;
 }
 
 .txt-name {
@@ -146,17 +272,48 @@ form {
   outline: none;
 }
 
-.projects-container {
-  width: 100vw;
+.social-media-icons {
+  margin-top: 30px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 24px;
+  height: 24px;
+  padding: 16px;
+  border-radius: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-style: none;
+  color: rgba(240,240,240,1);
+  align-content: center;
   justify-content: center;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.projects-container {
+  display: block;
+  width: 70vw;
+  min-height: 96vh;
+  max-width: 1000px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .projects-section-header {
   text-align: center;
-  color: rgba(250,250,250,0.8);
-  font-size: 30px;
-  font-weight: bold;
+  color: rgb(100, 255, 218);
+  font-size: large;
   padding-top: 20px;
+  font-family: 'Fira Code', monospace;
 }
 
 .projects-tile-container {
@@ -165,13 +322,12 @@ form {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 0px 10vw;
+  padding: 0px 0px;
   padding-top: 10px;
 }
 
 .project-card {
-  width: 370px;
-  min-width: 370px;
+  width: 350px;
   height: 385px;
   border-radius: 20px;
   box-shadow: 0 2px 44px 0 rgba(0,0,0,0.14);
@@ -190,15 +346,16 @@ form {
 .project-title {
   text-align: left;
   margin-left: 17px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: rgba(250,250,250,0.9);
 }
 
 .project-subtitle {
   text-align: left;
   margin-left: 17px;
-  margin-top:3px;
-  font-weight: 600;
+  margin-top: 3px;
+  font-weight: 550;
+  font-size: 15px;
   color: rgba(250,250,250,0.7);
 }
 
@@ -210,6 +367,30 @@ form {
   font-size: 13px;
   font-weight: 500;
   color: rgba(250,250,250,0.8);
+}
+
+@media only screen and (max-width: 768px) {
+  .project-card {width: 330px; height: 365px;}
+  .project-picture {height: 250px;}
+}
+
+@media only screen and (max-width: 550px) {
+  .project-card {width: 320px; height: 355px;}
+  .project-picture {height: 240px;}
+}
+
+@media only screen and (max-width: 450px) {
+  .project-card {width: 300px; height: 335px;}
+  .project-title {font-size: 18px;}
+  .project-subtitle {font-size: 14px;}
+  .project-picture {height: 220px;}
+}
+
+@media only screen and (max-width: 350px) {
+  .project-card {width: 290px; height: 325px;}
+  .project-title {font-size: 18px;}
+  .project-subtitle {font-size: 13px;}
+  .project-picture {height: 210px;}
 }
 
 html body [data-ca3_iconfont="ETmodules"]::before {

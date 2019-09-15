@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "aos": "^2.3.4",
     "classnames": "^2.2.6",
     "react": "^16.7.0",

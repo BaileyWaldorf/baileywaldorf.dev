@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './css/App.css';
+import './css/fonts.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
-import Background from './assets/bg.jpg';
 
 var background = {
-  backgroundImage: `url(${Background})`,
-  backgroundSize: 'cover',
+  backgroundColor: 'rgb(10, 25, 47)',
   overflow: 'hidden',
   textAlign: 'center',
-  height: '200vh',
   color: '#333',
 };
 
