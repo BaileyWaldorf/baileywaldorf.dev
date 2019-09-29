@@ -4,6 +4,7 @@ import './css/fonts.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 var background = {
   backgroundColor: 'rgb(10, 25, 47)',
@@ -20,6 +21,7 @@ class App extends Component {
         <Header />
         <Home />
         <Projects />
+        <Footer />
       </div>
     );
   }

@@ -393,6 +393,18 @@ form {
   .project-picture {height: 210px;}
 }
 
+.footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+.footer-subtext {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
 html body [data-ca3_iconfont="ETmodules"]::before {
   font-family: "ETmodules";
 }
