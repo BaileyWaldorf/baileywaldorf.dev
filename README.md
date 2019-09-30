@@ -2,7 +2,7 @@
 v1 of my personal website. No bootsrap or UI libraries. Completely from scratch.
 Deployed on Github Pages using the Google .dev domain.
 
-![demo](https://github.com/BaileyWaldorf/baileywaldorf.dev/blob/master/public/readme.png)
+[![demo](https://github.com/BaileyWaldorf/baileywaldorf.dev/blob/master/public/readme.png)](https://baileywaldorf.dev/)
 
 ## Running and deploying
 1.  Clone repository
