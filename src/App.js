@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Home from './Home';
-import Projects from './Projects';
-import Experience from './Experience';
-import Background from './assets/bg.jpg';
+import './css/App.css';
+import './css/fonts.css';
+import Header from './components/Header';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 var background = {
-  backgroundImage: `url(${Background})`,
-  backgroundSize: 'cover',
+  backgroundColor: 'rgb(10, 25, 47)',
   overflow: 'hidden',
   textAlign: 'center',
-  height: '500vh',
   color: '#333',
 };
 
@@ -23,6 +21,7 @@ class App extends Component {
         <Header />
         <Home />
         <Projects />
+        <Footer />
       </div>
     );
   }
